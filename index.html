@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mi perfil</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
+@import url("fontawesome-all.min.css");
+
+
+html, body, div, span, applet, iframe, h1, h2, h3, h4, h5, h6, p, a, ol, ul, li, fieldset,
+form, label, article, aside, figure, figcaption, footer, header, menu, nav,section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+
+	html {
+		height: 100%;
+	}
+
+	html {
+		box-sizing: border-box;
+	}
+
+	body {
+		background: #ffffff;
+		height: 100%;
+		min-width: 320px;
+		font-family: "Source Sans Pro", "sans-serif";
+		font-weight: 300;
+		font-size: 14pt;
+		line-height: 1.75em;
+		color: #39454b;
+		letter-spacing: 0.025em;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: 900;
+		letter-spacing: -0.0325em;
+	}
+
+		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+	h2 {
+		font-size: 1.25em;
+		line-height: 1.25em;
+		letter-spacing: -0.05em;
+	}
+
+
+
+
+	a {
+		color: #000000;
+	}
+
+
+
+	p, ul, ol, dl, table {
+		margin-bottom: 1em;
+	}
+
+/* Box */
+
+	.box {
+		background: #ffffff;
+		color: #39454b;
+		padding: 2em;
+        width: 50%;
+	}
+
+		.box > :last-child {
+			margin-bottom: 0;
+		}
+
+		.box.style2 {
+			padding: 2.5em 1.5em 2.5em 2.5em;
+		}
+
+/* Boton-------------------------------------------------------- */
+
+	.button,
+	button {
+		background-color: #000000;
+		border: 0;
+		border-radius: 3.5em;
+		color: #ffffff;
+		cursor: pointer;
+		display: inline-block;
+		height: 1.5em;
+		line-height: 2.5em;
+		padding: 0 2em 0 2em;
+		position: relative;
+		text-align: center;
+	}
+
+		.button.down,
+		button.down {
+			width: 5em;
+			height: 5em;
+			line-height: 4.5em;
+			padding: 0;
+			background-image: url("images/dark-arrow.svg");
+			background-position: center center;
+			background-repeat: no-repeat;
+			text-indent: -10em;
+			overflow: hidden;
+		}
+			.button.down.anchored,
+			button.down.anchored {
+				bottom: 0;
+				border-bottom: 0;
+				border-radius: 3em 3em 0 0;
+				height: 4.5em;
+				margin-left: -2.5em;
+			}
+		.button.anchored,
+		button.anchored {
+			position: absolute;
+			left: 50%;
+		}
+
+		.button:active,
+		button:active {
+			background-color: #000000;
+		}
+		.button.style2,
+		button.style2 {
+			background-color: transparent;
+			border: solid 2px #e5e6e7;
+		}
+			.button.style2:hover,
+			button.style2:hover {
+				background-color: rgba(229, 230, 231, 0.25);
+			}
+			.button.style2:active,
+			button.style2:active {
+				background-color: rgba(229, 230, 231, 0.375);
+			}
+		
+
+	
+
+/* redes----------------------------------------------- */
+
+	.redes {
+		text-decoration: none;
+		position: relative;
+		text-decoration: none;
+	}
+
+		.redes:before {
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			display: inline-block;
+			font-style: normal;
+			font-variant: normal;
+			text-rendering: auto;
+			line-height: 1;
+			text-transform: none !important;
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 400;
+		}
+
+		.redes:before {
+			line-height: inherit;
+		}
+
+		.redes > .label {
+			display: none;
+		}
+
+		.redes.solid:before {
+			font-weight: 900;
+		}
+
+		.redes.brands:before {
+			font-family: 'Font Awesome 5 Brands';
+		}
+
+
+
+/* Redes---------------------------------------------------------------- */
+
+	ul.redes {
+		cursor: default;
+	}
+
+		ul.redes li {
+			display: inline-block;
+		}
+
+		ul.redes a {
+			display: inline-block;
+			width: 2em;
+			height: 2em;
+			line-height: 2em;
+			text-align: center;
+			border: 0;
+		}
+
+	header {
+		margin-bottom: 1em;
+	}
+	header h1{
+		color: #000000;
+	}
+
+		header p {
+			display: block;
+			margin: 1em 0 0 0;
+			padding: 0 0 0.5em 0;
+		}
+
+	footer {
+		margin-top: 2em;
+	}
+
+/* Gallery */
+
+	.gallery {
+		display: flex;
+		-moz-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		width: 45em;
+		max-width: 100%;
+		margin: 0 auto 2em auto;
+	}
+
+		.gallery article {
+			width: 50%;
+			position: relative;
+			opacity: 1.0;
+		}
+
+			.gallery article .image {
+				margin: 0;
+				display: block;
+			}
+
+		.gallery.inactive article {
+			opacity: 0;
+		}
+
+
+/*--------------------------------------------------- Header -------------------------------------------------*/
+
+	#header {
+		position: fixed;
+		z-index: 10000;
+		left: 0;
+		top: 0;
+		width: 100%;
+		background: rgba(255, 255, 255, 0.95);
+		height: 3.6em;
+		line-height: 3em;
+		box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
+	}
+
+		
+
+		#header nav {
+			position: absolute;
+			right: 0.5em;
+			top: 0;
+			height: 3em;
+			line-height: 3em;
+		}
+
+			#header nav ul {
+				margin: 0;
+			}
+
+				#header nav ul li {
+					display: inline-block;
+					margin-left: 0.5em;
+					font-size: 0.9em;
+				}
+
+					#header nav ul li a {
+						display: block;
+						color: inherit;
+						text-decoration: none;
+						height: 3em;
+						line-height: 3em;
+						padding: 0 0.5em 0 0.5em;
+						outline: 0;
+					}
+
+	                 body {
+	                	padding-top: 3em;
+	                 }
+
+/* ------------------------------------------------------Main------------------------------------------------------------------ */
+
+	    .main {
+	 	display: flex;
+		position: relative;
+		margin: 0;
+		overflow-x: hidden;
+	    }
+
+		.main > .content {
+			width: 45em;
+			max-width: calc(100% - 4em);
+			margin: 0 auto;
+		}
+
+			.main > .content > :last-child {
+				margin-bottom: 0;
+			}
+
+		.main.fullscreen {
+			min-height: 100%;
+		}
+        
+
+		.main.style1 {
+			-moz-align-items: center;
+			-webkit-align-items: center;
+			-ms-align-items: center;
+			align-items: center;
+			-moz-justify-content: center;
+			-webkit-justify-content: center;
+			-ms-justify-content: center;
+			justify-content: center;
+			text-align: center;
+			padding: 3em 0 3em 0;
+		}
+
+			.main.style1 h2 {
+				font-size: 2.25em;
+				line-height: 1em;
+			}
+
+			.main.style1.inactive > .content {
+				opacity: 0;
+			}
+
+		.main.style2 {
+			-moz-align-items: center;
+			-webkit-align-items: center;
+			-ms-align-items: center;
+			align-items: center;
+			-moz-justify-content: center;
+			-webkit-justify-content: center;
+			-ms-justify-content: center;
+			justify-content: center;
+			padding: 3em 0 3em 0;
+			overflow: hidden;
+		}
+
+			.main.style2 > .content {
+				position: relative;
+				width: 35%;
+				margin: 0;
+			}
+
+			.main.style2.left {
+				justify-content:center;
+                width: 100%;
+
+			}
+
+			.main.style2.right {
+				justify-content: flex-end;
+			}
+
+		    .main.style3 {
+			text-align: center;
+			padding: 6em 0 6em 0;
+		    }
+
+			.main.style3 .content > header {
+				margin-bottom: 2em;
+			}
+
+			.main.style3.primary {
+				background: #ffffff;
+			}
+
+			.main.style3.secondary {
+				background: #f5f6f7;
+			}
+
+		.main.dark {
+			color: #ffffff;
+		}
+
+			
+			.main.dark .button.style2 {
+				border-color: #ffffff;
+			}
+
+				.main.dark .button.style2:hover {
+					background-color: rgba(255, 255, 255, 0.125);
+				}
+
+				.main.dark .button.style2:active {
+					background-color: rgba(255, 255, 255, 0.25);
+				}
+
+				.main.dark .button.style2.down {
+					background-image: url("media/flecha.png");
+                    background-size: 100%;
+                    border-radius: 50px;
+                    opacity: 5;
+                    top: 85%;
+				}
+
+
+/* Footer */
+
+	#footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: relative;
+		margin: 0;
+		line-height: 1em;
+		padding: 1.5em;
+		background: #d1d1d1;
+		color: rgba(0, 0, 0, 0.5);
+		overflow: hidden;
+	}
+
+
+
+/* ---------------------------------------------Fondo------------------------------------------------------- */
+
+	#acercademi {
+		background: url("media/Diseño\ sin\ título\ \(1\).png");
+		background-size: cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
+	}
+    #inicio {
+		background: url("media/fondo.jpg");
+		background-size: cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, bottom center;
+		background-repeat: repeat, no-repeat;
+	}
+
+	#proyectos {
+		background: url("media/1.1.jpg");
+		background-size: cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
+	}
+	#sig {
+		background: url("media/sig.jpg");
+		background-size: cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
+	}
+	#mer {
+		background: url("media/mer.jpg");
+		background-size: cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
+	}
+	#cer {
+		background: url("media/cer.jpg");
+		background-size: cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
+	}
+
+/*Responsivo -----------------------------------------------------------------------------------------*/
+@media screen and (max-width: 764px) {
+    .card {
+        display: none;
+    }
+    #contenido .box {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+	#demo{
+		display: none;
+	}
+	#noquiero{
+		display: none;
+	}
+}
+</style>
+
+<!-- Menu -->
+<header class="navbar navbar-expand-md py-0 fixed-top" id="header">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img style="width: 38%; left: 0%;" src="media/logo.png" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#barrademenu" aria-controls="barrademenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="barrademenu">
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="#inicio">Inicio</a>
+                <a class="nav-link" href="#acercademi">Acerca de mi</a>
+                <a class="nav-link" href="#proyectos">Mis trabajos</a>
+                <a class="nav-link" href="#cer">Certificados</a>
+                <a class="nav-link" href="#rede">Contacto</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<!-- Inicio -->
+    <section id="inicio" class="main style1 dark fullscreen">
+        <div class="content">
+            <header>
+                <h2>Portafolio</h2>
+            </header>
+            <p>Luz Alejandra Palma Osorno</p>
+            <footer>
+                <a href="#acercademi" class="button style2 down">Ver más..</a>
+            </footer>
+        </div>
+    </section>
+
+<!-- Acerca de mi -->
+    <section id="acercademi" class="main style2 right dark fullscreen">
+        <div class="card" style="width:400px;">
+            <img class="card-img-top" src="media/Mi.jpeg" alt="Card image" style="width:100%">
+           </div>
+        <div id="contenido" style="width: 60%;" class="content box style2">
+            <header>
+                <h2 style="width: 100%; text-align: center;">Estudiante de TSU en Entornos Virtuales y Negocios Digitales</h2>
+            </header>
+            <div class="container mt-1">
+            <p style="font-size: 1rem;">Soy estudiante de TSU en Entornos Virtuales y Negocios Digitales con un enfoque apasionada por el diseño para una experiencia óptima del usuario. Mi experiencia en marketing digital me permite no solo diseñar sitios web visualmente atractivos, sino también asegurar su efectividad.
+
+                Además de mi formación académica, he obtenido un certificado en Diseño UX, lo que me permite aplicar principios de experiencia de usuario.  Mi capacidad para la gestión de proyectos y atención a los detalles me ha permitido liderar proyectos de manera efectiva, asegurando la entrega de resultados de alta calidad.
+            </p>       
+        </div>
+        
+        <a style="padding: 0px;" href="#proyectos" class="button style2 down anchored">Next</a>
+    </section>
+
+<!-- Proyectos -->
+<section id="proyectos" class="main style2 left dark fullscreen">
+    <!-- Encabezado y texto -->
+    <div class="content box style2" style="width: 60%;">
+        <header>
+            <h2>Diseñador/a Digital con Experiencia en Adobe Illustrator, Photoshop, Canva y Edición de Videos</h2>
+        </header>
+        <p>Como estudiante de TSU en Entornos Virtuales y Negocios Digitales, tengo una sólida experiencia en diseño digital. Manejo con destreza Adobe Illustrator y Photoshop para crear gráficos de alta calidad, así como Canva para generar contenido visual efectivo rápidamente. Además, mis habilidades en edición de videos añaden dinamismo a las estrategias de marketing digital. Si buscas un diseñador/a versátil y creativo/a para tus proyectos digitales, estaré encantado/a de colaborar contigo.</p>
+    </div>
+
+    <!-- Párrafo centrado -->
+    <div >
+        <p style="top: 100%; text-align: right;"></p>
+    </div>
+
+    <!-- Carrusel de imágenes -->
+    <div id="demo" style=" width: 33%; right: 0%;" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicadores -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="5"></button>
+        </div>
+      
+        <!-- Imágenes del carrusel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="media/1.png" alt="Los Angeles" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="media/2.png" alt="Chicago" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="media/3.png" alt="New York" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="media/4.png" alt="New York" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="media/5.png" alt="New York" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="media/6.png" alt="New York" class="d-block w-100">
+            </div>
+        </div>
+      
+        <!-- Controles del carrusel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+        
+        <a href="#sig" class="button style2 down anchored">Next</a>
+    </section>
+
+    <section id="sig" style="opacity: 80%;" class="main style2 left dark fullscreen">
+        <!-- Encabezado y texto -->
+        <div class="content box style2" style="width: 100%;">
+            <header>
+                <h2 style="text-align: center;">Desarrolladora Web</h2>
+            </header>
+            <p>En mi portafolio como Desarrolladora Web, destaco mi capacidad para diseñar y desarrollar sitios web que no solo son visualmente atractivos, sino también altamente funcionales. Utilizo herramientas avanzadas como CSS y Bootstrap para garantizar un diseño moderno y una navegación intuitiva. Mis sitios web son completamente responsivos, adaptándose perfectamente a dispositivos móviles y de escritorio para una experiencia de usuario óptima en cualquier pantalla. Además, subo todos mis proyectos a GitHub, donde los comparto con la comunidad y gestiono versiones para asegurar la calidad y la accesibilidad del código.</p>
+        </div>
+        <div id="noquiero" style=" width: 45%; align-items: center;" class="container mt-3">
+            <h2 style="color: #939393; background-color: #ffffff; text-align: center;">Links</h2>
+            <a href="https://lion14123.github.io/paguina_informativa_biker/?classId=8dab4269-b4f0-46b8-bbf6-aa988bbc39d6&assignmentId=3c5528ec-b6c3-47c7-8916-7cc413707251&submissionId=f8fc60dd-94fe-b2ce-49ac-99f21b3d4189" class="btn btn-outline-secondary">BajioBiker</a>
+            <a href="https://luz-osorno.github.io/Palma-Luz_Practica_EVN301_GIT/" class="btn btn-outline-secondary">Landin_Moda</a>
+            <a href="https://luz-osorno.github.io/Palma_Luz_Animaciones/" class="btn btn-outline-secondary">Animaciones</a>
+        </div>
+        <a href="#mer" class="button style2 down anchored">Next</a>
+    </section>
+
+
+    <section id="mer" style="opacity: 80%;" class="main style2 left dark fullscreen">
+        <!-- Encabezado y texto -->
+        <div class="content box style2" style="width: 100%;">
+            <header>
+                <h2 style="text-align: center;">Especialista en Mercadotecnia Digital</h2>
+            </header>
+            <p>Mi experiencia en mercadotecnia digital se centra en optimizar tu presencia en plataformas clave como Facebook e Instagram, configurando estrategias efectivas que aumentan la visibilidad y el compromiso con tu audiencia. Además, gestiono eficientemente perfiles en Google My Business para maximizar tu presencia local y mejorar la interacción con clientes potenciales.
+
+				Como parte de mis habilidades técnicas, realizo análisis básicos de SEO para mejorar el posicionamiento de tu sitio web en los motores de búsqueda, asegurando que sea más visible para tu público objetivo. También tengo experiencia en la gestión de dominios y subdominios, asegurando una estructura web optimizada y fácil de navegar.
+				
+				Además, puedo crear y gestionar campañas efectivas en Google Ads, utilizando estrategias de pago por clic para aumentar el tráfico y las conversiones en tu sitio web. Mi enfoque es siempre adaptarme a las últimas tendencias y herramientas digitales para garantizar resultados efectivos y medibles en tu estrategia de mercadotecnia digital.</p>
+        </div>
+    
+        
+        <a href="#cer" class="button style2 down anchored">Next</a>
+    </section>
+
+<!-- Certificados------------------------------------------------------- -->
+    <section id="cer" class="main style3 primary">
+        <div class="content">
+            <header>
+                <h2>Certificados</h2>
+                <p>En mi portafolio, destaco tres certificaciones clave que reflejan mi experiencia diversa y habilidades técnicas avanzadas. He obtenido un certificado en Diseño UX, que me capacita para crear experiencias de usuario intuitivas y efectivas. Además, he alcanzado certificaciones de Cisco en Switches e Interconexión, demostrando mi competencia en redes avanzadas y capacidad para gestionar infraestructuras de TI complejas con eficiencia.</p>
+            </header>
+                <div  > 
+                    <img class="float-start" style=" width: 30%;" src="media/C1 (1).png" >
+                    <img class="float-start" style=" width: 30%;" src="media/C1 (4).png" >
+                    <img  class="float-end" style=" width: 30%; " src="media/C1 (2).png" >
+                    <img class="mx-auto d-block" style=" width: 40%; align-content: center;" src="media/C1 (3).png" >
+                   
+                
+
+        </div>
+<!-- Footer -->
+    <footer id="footer">
+
+        <!-- Redes -->
+            <ul  id="rede" style="text-align: center; width: 100%;" class="rede">
+                <li><a href="https://www.facebook.com/profile.php?id=61557481065385&mibextid=LQQJ4d" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="https://www.instagram.com/luz__osorno?igsh=MWxtaG1pNGs3czRmOQ%3D%3D&utm_source=qr" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+            </ul>
+    </footer>
+    
+</body>
+</html>
